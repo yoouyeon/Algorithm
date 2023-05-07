@@ -4,7 +4,7 @@ move = 1 # 방향
 
 while N and M:
     M -= 1
-    pos_x += move * Nㄴ
+    pos_x += move * N
     pos_y += move * M
     move *= -1
     N -= 1
