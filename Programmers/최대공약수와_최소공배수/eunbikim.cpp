@@ -12,7 +12,6 @@
 using namespace std;
 
 int getGCD(int n, int m) {
-    vector<int> divisor;
     int max = 1;
     if (n > m)
         swap(n, m);
@@ -20,7 +19,7 @@ int getGCD(int n, int m) {
         if (n % i == 0) {
             if (m % i == 0 && max < i)
                 max = i;
-            if (i < (n / i) && m % (n / i) == 0 && max < (n / i))
+            if (m % (n / i) == 0 && max < (n / i))
                 max = n / i;
         } 
     }
