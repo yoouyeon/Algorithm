@@ -25,7 +25,7 @@
 //     while(people.length) {
 //         const heavy = people.shift(); // 배열의 첫번째 원소 제거하고 그 원소 반환.
 //         if (people.length && people.at(-1) + heavy <= limit)
-//                 people.pop(); // 배열의 첫번째 원소 제거
+//                 people.pop(); // 배열의 마지막 원소 제거
 //         answer++;
 //     }
 
