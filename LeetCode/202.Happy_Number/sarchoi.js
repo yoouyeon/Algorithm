@@ -4,7 +4,7 @@
  */
 
 const isHappy = function(n) {
-  const checkNums = new Map();
+  const checkNums = new Set();
 
   const checkNumber = function(n) {
     if (n === 1) 
@@ -12,7 +12,7 @@ const isHappy = function(n) {
     const next = String(n).split('').reduce((prev, curr) => prev + Number(curr) ** 2, 0);
     if (checkNums.has(next))
       return false;
-    checkNums.set(next);
+    checkNums.add(next);
     return checkNumber(next);
   }
   
