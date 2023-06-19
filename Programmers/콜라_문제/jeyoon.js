@@ -9,7 +9,7 @@ function solution(a, b, n) {
   let empty = startEmptyCoke;
   let full = 0;
 
-  // 빈 병이 giveBottle개 이상일 때 까지 반복
+  // 빈 병이 emptyCoke개 이상일 때 까지 반복
   while (empty >= emptyCoke) {
     // 현재 빈 병으로 받을 수 있는 콜라 묶음 구하기
     const cokeBox = Math.floor(empty / emptyCoke);
