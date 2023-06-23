@@ -3,7 +3,7 @@ class Solution:
         ans = []
         
         def dfs(left, right, s):
-            if left == n and right == n:
+            if len(s) == n * 2:
                 ans.append(s)
                 return
             if left < n:
