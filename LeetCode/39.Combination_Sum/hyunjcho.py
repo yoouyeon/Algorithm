@@ -4,7 +4,6 @@ class Solution:
         l = len(candidates)
 
         def dfs(i, s, tmp):
-                print(tmp)
                 if s == target:
                     ans.append(tmp)
                     return
