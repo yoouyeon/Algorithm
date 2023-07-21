@@ -14,3 +14,31 @@ function solution(n, left, right) {
 
   return answer;
 }
+
+// 단순 구현 풀이 : 시간 초과
+/*
+function solution(n, left, right) {
+    // step 1: 2차원 배열 만들기
+    const matrix = new Array(n);
+    for(let i = 0; i < n; i++)
+        matrix[i] = new Array(n);    
+    for(let i = 1; i <= n; i++) {
+        for (let row = 0; row < i; row++) {
+            if (row === i - 1) {
+                for (let col = 0; col <= row; col++)
+                    matrix[row][col] = i;
+                continue;
+            }
+            matrix[row][i - 1] = i;
+        }
+    }
+
+    // step 2: 1차원 배열로 만들기
+    const array = matrix.reduce((acc, cur) => acc = acc.concat(cur), []);
+    
+    // step 3: left부터 right까지 자르기
+    const answer = array.slice(left, right + 1);
+    
+    return answer;
+}
+*/
